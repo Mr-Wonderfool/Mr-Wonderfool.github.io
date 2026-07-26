@@ -1,0 +1,47 @@
+# Site settings — edit these first
+name: Zhiming (Michael) Xu
+title: Zhiming Xu
+description: >-
+  M.S. student in Robotics at CMU RI. Research in deep reinforcement learning,
+  robotics, and representation learning.
+url: "https://mr-wonderfool.github.io"
+baseurl: ""
+
+# Profile (shown in header)
+position:
+affiliation: Carnegie Mellon University · Robotics Institute
+email: mx3@andrew.cmu.edu
+avatar: images/avatar.jpg
+repository: Mr-Wonderfool/mr-wonderfool.github.io
+cv: pdfs/cv.pdf
+
+# Social / footer links (leave blank to hide)
+footer-links:
+  email: mx3@andrew.cmu.edu
+  github: Mr-Wonderfool
+  google_scholar: HFzNXwgAAAAJ
+  twitter: michaelxumm
+  linkedin: zhiming-xu-726493387
+
+# Optional analytics (leave blank to disable)
+google_analytics: ""
+
+# Jekyll
+permalink: /
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+sass:
+  style: compressed
+
+plugins:
+  - jekyll-sitemap
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - ref.bib
+  - scripts/

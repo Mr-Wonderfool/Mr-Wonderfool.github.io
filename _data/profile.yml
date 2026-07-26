@@ -1,0 +1,61 @@
+education:
+  - institution: Carnegie Mellon University
+    subtitle: Robotics Institute
+    degree: M.S. in Robotics
+    period: Aug 2026 - Jun 2028 (Expected)
+    icon: images/institutions/cmu.png
+    url: https://www.ri.cmu.edu/
+    current: true
+    bullets:
+      - Incoming M.S. student in the Robotics Institute.
+
+  - institution: Tongji University
+    subtitle: Guohao College
+    degree: B.E. in Data Science
+    period: Sep 2022 - Jun 2026
+    icon: images/institutions/tongji.png
+    url: https://www.tongji.edu.cn/
+    note: "GPA 4.85/5.00 · Top 5% in honored class"
+    bullets:
+      - Core training in AI, robotics, and systems; undergraduate research in the
+        Robotics and Artificial Intelligence Lab (RAIL), focusing on sim-to-real transfer
+        of deep RL policies and latent-space shaping for policy adaptation.
+
+internships:
+  - institution: Beijing Academy of Artificial Intelligence (BAAI)
+    subtitle: Embodied Intelligence Research Intern
+    role: Research Intern
+    period: Mar 2026 - Jul 2026
+    icon: images/institutions/baai-emblem.svg
+    url: https://www.baai.ac.cn/
+    current: true
+    bullets:
+      - Training wholebody control policies for a Unitree Go2 quadruped equipped with an ARX5 arm.
+      - Researching vision-language-action systems that plan high-level goals for these wholebody controllers.
+      - Exploring unsupervised pre-training for robot foundation models.
+
+  - institution: NIO Inc.
+    subtitle: Multimodal Agent Group · Autonomous Driving Division
+    role: Engineering Assistant
+    period: Jul 2025 - Nov 2025
+    icon: images/institutions/nio.svg
+    url: https://www.nio.com/
+    bullets:
+      - >-
+        Built a clustering pipeline to extract motion tokens from driving clips and designed
+        a query-based architecture for autoregressive path generation as part of end-to-end
+        autonomous driving model training.
+      - >-
+        Built RL infrastructure for fine-tuning planners implemented in mmdet3d, improving
+        metrics such as collision rate through post-training.
+      - >-
+        Developed a dual-system architecture referencing the <em>InternVLA-N1</em> vision-language
+        navigation model, using a plan token to pass information from the upstream VLM to
+        an action expert, and evaluated model capacity in parking lot scenarios.
+
+misc:
+  - title: "English Debating"
+    description: >-
+      In my free time, I enjoy British Parliamentary (BP) debate. I served as captain of
+      the Tongji English Debating Team and was a quarter-finalist at the 23rd FLTRP ETIC Cup
+      National English Debating Competition, where I also received the National Best Speaker Award.

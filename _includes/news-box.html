@@ -1,0 +1,7 @@
+<div class="news-box news-box--{{ item.color | default: 'neutral' }}">
+  <div class="news-box-accent" aria-hidden="true"></div>
+  <div class="news-box-body">
+    {% if item.date %}<span class="news-date">{{ item.date }}</span>{% endif %}
+    {{ item.text }}
+  </div>
+</div>

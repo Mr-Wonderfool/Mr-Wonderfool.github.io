@@ -1,0 +1,42 @@
+<div class="timeline-item{% if item.current %} timeline-item--current{% endif %}">
+  <div class="timeline-marker">
+    <div class="timeline-icon">
+      {% if item.icon %}
+      <img src="{{ item.icon | relative_url }}" alt="{{ item.institution | escape }}">
+      {% else %}
+      <i class="fa-solid fa-building" aria-hidden="true"></i>
+      {% endif %}
+    </div>
+  </div>
+  <div class="timeline-body">
+    <div class="timeline-head">
+      <div class="timeline-headline">
+        {% if item.url %}
+        <a class="timeline-institution" href="{{ item.url }}">{{ item.institution }}</a>
+        {% else %}
+        <span class="timeline-institution">{{ item.institution }}</span>
+        {% endif %}
+        {% if item.subtitle %}
+        <span class="timeline-subtitle">{{ item.subtitle }}</span>
+        {% endif %}
+      </div>
+      <span class="timeline-period">{{ item.period }}</span>
+    </div>
+    {% if item.degree %}
+    <p class="timeline-role">{{ item.degree }}</p>
+    {% endif %}
+    {% if item.role %}
+    <p class="timeline-role">{{ item.role }}</p>
+    {% endif %}
+    {% if item.note != blank %}
+    <p class="timeline-note">{{ item.note }}</p>
+    {% endif %}
+    {% if item.bullets %}
+    <ul class="timeline-bullets">
+      {% for bullet in item.bullets %}
+      <li>{{ bullet }}</li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+  </div>
+</div>

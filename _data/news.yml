@@ -1,0 +1,15 @@
+- date: "2026"
+  color: amber
+  text: >-
+    Started a research internship at <strong>BAAI</strong> in March 2026, focusing on
+    wholebody VLA.
+
+- date: "2026"
+  color: green
+  text: >-
+    <strong>KinematicRL</strong> accepted to the <em>IEEE Transactions on Automation Science and Engineering (T-ASE)</em>.
+
+- date: "2026"
+  color: blue
+  text: >-
+    <strong>Latent Dynamics Geometries</strong> accepted to the <em>International Conference on Machine Learning (ICML)</em>.

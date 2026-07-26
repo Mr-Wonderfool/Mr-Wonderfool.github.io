@@ -1,0 +1,59 @@
+<div class="pub">
+  {% if pub.image %}
+  <div class="pub-media">
+    <img src="{{ pub.image | relative_url }}" alt="{{ pub.title | escape }} overview">
+    {% if pub.demo_gif %}
+    <img class="pub-demo" src="{{ pub.demo_gif | relative_url }}" alt="{{ pub.title | escape }} demonstration">
+    {% endif %}
+  </div>
+  {% endif %}
+  <div class="pub-body">
+    <p class="pub-title">{{ pub.title }}</p>
+    <p class="pub-authors">
+      {% for author in pub.authors %}
+      {% if author.name == site.name %}
+      <strong>{{ author.name }}</strong>
+      {% else %}
+      {{ author.name }}
+      {% endif %}
+      {% if author.corresponding %}<sup class="author-flag">†</sup>{% endif %}{% unless forloop.last %}, {% endunless %}
+      {% endfor %}
+    </p>
+    {% assign has_corresponding = pub.authors | where_exp: "author", "author.corresponding" | size %}
+    {% if has_corresponding > 0 %}
+    <p class="pub-authors-note"><sup>†</sup> Corresponding author{% if has_corresponding > 1 %}s{% endif %}.</p>
+    {% endif %}
+    <p class="pub-venue"><em>{{ pub.venue }}</em></p>
+    {% if pub.awards %}
+    {% for award in pub.awards %}
+    <p class="pub-award">{{ award }}</p>
+    {% endfor %}
+    {% endif %}
+    {% if pub.links %}
+    <p class="pub-links">
+      {% for link in pub.links %}
+      <a href="{% if link.url contains '://' %}{{ link.url }}{% else %}{{ link.url | relative_url }}{% endif %}">
+        {% case link.label %}
+        {% when 'paper' %}
+        <i class="fa-solid fa-file-pdf" aria-hidden="true"></i>
+        {% when 'video' %}
+        <i class="fa-brands fa-youtube" aria-hidden="true"></i>
+        {% when 'code' %}
+        <i class="fa-brands fa-github" aria-hidden="true"></i>
+        {% when 'poster' %}
+        <i class="fa-solid fa-image" aria-hidden="true"></i>
+        {% when 'website' %}
+        <i class="fa-solid fa-globe" aria-hidden="true"></i>
+        {% else %}
+        <i class="fa-solid fa-link" aria-hidden="true"></i>
+        {% endcase %}
+        {{ link.label }}
+      </a>
+      {% endfor %}
+    </p>
+    {% endif %}
+    {% if pub.tldr %}
+    <p class="tldr"><span class="tldr-label">TL;DR:</span> {{ pub.tldr }}</p>
+    {% endif %}
+  </div>
+</div>

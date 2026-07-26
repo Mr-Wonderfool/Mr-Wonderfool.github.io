@@ -1,0 +1,56 @@
+- id: kinematicrl
+  year: 2026
+  title: "KinematicRL: A Sim-to-Real Reinforcement Learning Framework For Social Navigation With Kinodynamic Feasibility"
+  authors:
+    - name: Zhiming Xu
+    - name: Haodong Yang
+    - name: Chengju Liu
+    - name: Qijun Chen
+    - name: Chenpeng Yao
+      corresponding: true
+  venue: "IEEE Transactions on Automation Science and Engineering (T-ASE), 2026"
+  bib_key: kinematicrl
+  image: images/papers/kinematicRL.svg
+  demo_gif: images/papers/kinematicrl-demo.gif
+  tldr: >-
+    KinematicRL addresses three key sim-to-real challenges in DRL-based social navigation:
+    kinodynamic feasibility, adaptation to varying crowd sizes, and pedestrian state estimation.
+    We introduce a higher-order action space, a gated transformer policy for crowd-density
+    adaptation, and a cluster-based tracking pipeline for robust human-state estimation, and
+    show that the system transfers to a real differential-drive robot with minimal modification.
+  links:
+    - label: paper
+      url: https://arxiv.org/abs/2606.12042
+    - label: video
+      url: https://youtu.be/Z4af55A_xic
+    - label: code
+      url: https://github.com/Mr-Wonderfool/KinematicRL
+
+- id: latent-dynamics-geometries
+  year: 2026
+  title: "Dynamics Are Learned, Not Told: Semi-Supervised Discovery of Latent Dynamics Geometries For Zero-Shot Policy Adaptation"
+  authors:
+    - name: Zhiming Xu
+    - name: Weitao Zhou
+      corresponding: true
+    - name: Xianghui Pan
+    - name: Nanshan Deng
+    - name: Chengju Liu
+    - name: Qijun Chen
+    - name: Chenpeng Yao
+      corresponding: true
+  venue: "International Conference on Machine Learning (ICML), 2026"
+  bib_key: latent-dynamics-geometries
+  image: images/papers/latent_dynamics_geometries.svg
+  tldr: >-
+    We prove a monotonic relationship between target-domain regret and the Lipschitz
+    smoothness of a trajectory-dynamics encoder. By combining RL with contrastive learning
+    and bounding the Lipschitz constant with an InfoNCE loss, we obtain a policy that
+    exhibits zero-shot adaptation under dynamics shift.
+  links:
+    - label: paper
+      url: https://arxiv.org/abs/2606.02280
+    - label: poster
+      url: pdfs/poster_ldg_icml2026.pdf
+    - label: code
+      url: https://github.com/Mr-Wonderfool/Latent-Dynamics-Geometries

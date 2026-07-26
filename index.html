@@ -1,0 +1,162 @@
+---
+layout: default
+---
+
+<!-- ========== HEADER ========== -->
+<tr>
+  <td>
+    <header class="page-header">
+      <p class="name">{{ site.name }}</p>
+      <div class="hero">
+        <div class="hero-text">
+          <p>
+            I am an incoming M.S. student in Robotics at the
+            <a href="https://www.ri.cmu.edu/">Robotics Institute</a>,
+            <a href="https://www.cmu.edu/">Carnegie Mellon University</a>.
+            I received my B.E. in Data Science from
+            <a href="https://www.tongji.edu.cn/">Tongji University</a>
+            (<a href="https://ghc.tongji.edu.cn/">Guohao College</a>).
+            During my undergraduate years, I worked in the
+            <a href="https://rail.tongji.edu.cn/main.htm">Robotics and Artificial Intelligence Lab (RAIL)</a>,
+            supervised by
+            <a href="https://see.tongji.edu.cn/info/1233/7519.htm">Prof. Qijun Chen</a>.
+            My research interests include deep reinforcement learning, robotics, motion planning,
+            and representation learning.
+          </p>
+        </div>
+        <div class="hero-photo">
+          <img class="avatar" src="{{ site.avatar | relative_url }}" alt="Portrait of {{ site.name }}">
+        </div>
+      </div>
+      <nav class="header-buttons" aria-label="Profile links">
+        <a class="btn-pill" href="mailto:{{ site.email }}"><i class="fa-solid fa-envelope" aria-hidden="true"></i> Email</a>
+        {% if site.cv %}
+        <a class="btn-pill" href="{{ site.cv | relative_url }}"><i class="fa-solid fa-file-pdf" aria-hidden="true"></i> CV</a>
+        {% endif %}
+        {% if site.footer-links.github %}
+        <a class="btn-pill" href="https://github.com/{{ site.footer-links.github }}"><i class="fa-brands fa-github" aria-hidden="true"></i> GitHub</a>
+        {% endif %}
+        {% if site.footer-links.google_scholar != blank %}
+        <a class="btn-pill" href="https://scholar.google.com/citations?user={{ site.footer-links.google_scholar }}"><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i> Google Scholar</a>
+        {% endif %}
+        {% if site.footer-links.twitter != blank %}
+        <a class="btn-pill" href="https://x.com/{{ site.footer-links.twitter }}"><i class="fa-brands fa-x-twitter" aria-hidden="true"></i> Twitter</a>
+        {% endif %}
+        {% if site.footer-links.linkedin != blank %}
+        <a class="btn-pill" href="https://www.linkedin.com/in/{{ site.footer-links.linkedin }}"><i class="fa-brands fa-linkedin" aria-hidden="true"></i> LinkedIn</a>
+        {% endif %}
+      </nav>
+    </header>
+  </td>
+</tr>
+
+<tr><td class="spacer-lg">&nbsp;</td></tr>
+
+<!-- ========== NEWS ========== -->
+<tr>
+  <td>
+    <h2 class="section-heading">News</h2>
+  </td>
+</tr>
+<tr><td class="spacer-sm">&nbsp;</td></tr>
+
+{% for item in site.data.news %}
+<tr>
+  <td>
+    {% include news-box.html item=item %}
+  </td>
+</tr>
+{% endfor %}
+
+<tr><td class="spacer-lg">&nbsp;</td></tr>
+
+<!-- ========== PUBLICATIONS ========== -->
+<tr>
+  <td id="publications">
+    <h2 class="section-heading">Research and Publications</h2>
+  </td>
+</tr>
+<tr><td class="spacer-sm">&nbsp;</td></tr>
+
+{% assign pubs_by_year = site.data.publications | group_by: "year" | sort: "name" | reverse %}
+{% for year_group in pubs_by_year %}
+<tr>
+  <td><p class="year-heading">{{ year_group.name }}</p></td>
+</tr>
+<tr>
+  <td>
+    <div class="pub-list">
+      {% for pub in year_group.items %}
+      {% include publication.html pub=pub %}
+      {% endfor %}
+    </div>
+  </td>
+</tr>
+{% endfor %}
+
+<tr><td class="spacer-lg">&nbsp;</td></tr>
+
+<!-- ========== INTERNSHIP EXPERIENCE ========== -->
+<tr>
+  <td id="internships">
+    <h2 class="section-heading">Internship Experience</h2>
+  </td>
+</tr>
+<tr><td class="spacer-sm">&nbsp;</td></tr>
+<tr>
+  <td>
+    <div class="timeline">
+      {% for item in site.data.profile.internships %}
+      {% include timeline-item.html item=item %}
+      {% endfor %}
+    </div>
+  </td>
+</tr>
+
+<tr><td class="spacer-lg">&nbsp;</td></tr>
+
+<!-- ========== EDUCATION ========== -->
+<tr>
+  <td id="education">
+    <h2 class="section-heading">Education</h2>
+  </td>
+</tr>
+<tr><td class="spacer-sm">&nbsp;</td></tr>
+<tr>
+  <td>
+    <div class="timeline">
+      {% for item in site.data.profile.education %}
+      {% include timeline-item.html item=item %}
+      {% endfor %}
+    </div>
+  </td>
+</tr>
+
+<tr><td class="spacer-lg">&nbsp;</td></tr>
+
+<!-- ========== MISC. ========== -->
+<tr>
+  <td>
+    <h2 class="section-heading">Misc.</h2>
+  </td>
+</tr>
+<tr><td class="spacer-sm">&nbsp;</td></tr>
+<tr>
+  <td>
+    {% for item in site.data.profile.misc %}
+    <div class="experience-item">
+      <h3>{{ item.title }}</h3>
+      <p class="meta">{{ item.period }}</p>
+      <p>{{ item.description }}</p>
+    </div>
+    {% endfor %}
+  </td>
+</tr>
+
+<tr><td class="spacer-lg">&nbsp;</td></tr>
+
+<tr>
+  <td align="center">
+    <p style="color:#888; font-size:12px;">&copy; {{ site.time | date: "%Y" }} {{ site.name }}</p>
+  </td>
+</tr>
