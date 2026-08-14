@@ -5,3 +5,4 @@ _site/
 *.gem
 .bundle/
 vendor/
+.DS_Store
