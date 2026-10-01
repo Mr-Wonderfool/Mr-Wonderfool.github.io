@@ -113,6 +113,10 @@ p.name {
   color: $ink-soft;
 }
 
+.hero-text p + p {
+  margin-top: 0.75em;
+}
+
 .hero-photo {
   flex: 0 0 200px;
   width: 200px;

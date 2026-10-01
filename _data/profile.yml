@@ -7,7 +7,7 @@ education:
     url: https://www.ri.cmu.edu/
     current: true
     bullets:
-      - Incoming M.S. student in the Robotics Institute.
+      - MSR student in the Robotics Institute.
 
   - institution: Tongji University
     subtitle: Guohao College
@@ -25,14 +25,13 @@ internships:
   - institution: Beijing Academy of Artificial Intelligence (BAAI)
     subtitle: Embodied Intelligence Research Intern
     role: Research Intern
-    period: Mar 2026 - Jul 2026
+    period: Mar 2026 - Aug 2026
     icon: images/institutions/baai-emblem.svg
     url: https://www.baai.ac.cn/
-    current: true
     bullets:
-      - Training wholebody control policies for a Unitree Go2 quadruped equipped with an ARX5 arm.
-      - Researching vision-language-action systems that plan high-level goals for these wholebody controllers.
-      - Exploring unsupervised pre-training for robot foundation models.
+      - Trained a whole-body RL policy on a Unitree Go2 with an ARX X5 arm for coordinated loco-manipulation.
+      - Built a structured controller through the arm-mount degrees of freedom, cutting end-effector tracking error by 90% and exposing a low-dimensional interface for VLA.
+      - Fine-tuned π0.5 on VR teleoperation data into QuadArm-VLA, mapping vision and language to that interface on hardware.
 
   - institution: NIO Inc.
     subtitle: Multimodal Agent Group · Autonomous Driving Division
